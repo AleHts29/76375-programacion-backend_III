@@ -15,6 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
+console.log("TEST_01");
+
 // Usando compresion
 // GZIP
 // app.use(compression())
