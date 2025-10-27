@@ -1,0 +1,35 @@
+{
+    "status": "success",
+    "payload": [
+        {
+            "_id": "655eacde18d63f2d8e18f8c5",
+            "first_name": "userTest_10",
+            "last_name": "userTest_10",
+            "email": "correodeprueba1@gmail.com",
+            "password": "$2b$10$jo8EM4kblYt2BXI/K5t12OsScO6fTAgjlMFxLJVAnWO6xn4tmd7T2",
+            "role": "user",
+            "pets": [],
+            "__v": 0
+        },
+        {
+            "_id": "65faf9941c367fa64602a182",
+            "first_name": "userTest_02",
+            "last_name": "userTest_02",
+            "email": "test@test02.com",
+            "password": "$2b$10$ekb80eUEB4q8WbeRb6Pj9eEeBKpC3E/0Gds1VLkyrMe9jIHc/YjXa",
+            "role": "user",
+            "pets": [],
+            "__v": 0
+        },
+        {
+            "_id": "6806f194c0cd7f4a4a8074b8",
+            "first_name": "Usuario de prueba 2",
+            "last_name": "Apellido de prueba 2",
+            "email": "correodeprueba2@gmail.com",
+            "password": "$2b$10$fVaozADHLN00/id2ltE2DunDP9R/09gxSe/m7/X6dHCHKZU1Rcv7q",
+            "role": "user",
+            "pets": [],
+            "__v": 0
+        }
+    ]
+}

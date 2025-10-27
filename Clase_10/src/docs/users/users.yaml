@@ -1,0 +1,118 @@
+paths:
+  /api/users/:
+    get:
+      summary: Obtiene todos los usuarios disponibles en la aplicacion
+      tags:
+        - Users
+      responses:
+        "200":
+          description: La operacion fue exitosa!, se retorna un arreglo de los usarios.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          # links:
+          #   getAllUsers:
+          #     operationId: getAllUsers
+          #     description: Obtener los usuario.
+        "500":
+          description: Error inesperado en el servidor, no se pudo manejar el proceso.
+  /api/users/{uid}:
+    get:
+      summary: Obtiene un usuario por id
+      tags:
+        - Users
+      parameters:
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+          description: Identificador del usuario
+      responses:
+        "200":
+          description: La operacion fue exitosa!, se retorna un arreglo de los usarios.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          # links:
+          #   getAllUsers:
+          #     operationId: getAllUsers
+          #     description: Obtener los usuario.
+        "500":
+          description: Error inesperado en el servidor, no se pudo manejar el proceso.
+    put:
+      summary: Actualiza un usuario de la palicion
+      tags:
+        - Users
+      parameters:
+        - name: uid
+          in: path
+          schema:
+            type: string
+          required: true
+          description: Identificador del usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        "200":
+          description: La operacion fue exitosa!, se retorna un arreglo de los usarios.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          # links:
+          #   getAllUsers:
+          #     operationId: getAllUsers
+          #     description: Obtener los usuario.
+        "500":
+          description: Error inesperado en el servidor, no se pudo manejar el proceso.
+
+
+
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: ID autogenerado por Mongo.
+        first_name:
+          type: String
+          description: Nombre del Usuario
+        last_name:
+          type: String
+          description: Apellido del Usuario
+        email:
+          type: String
+          description: Email del Usuario
+        password:
+          type: String
+          description: Password del Usuario
+        role:
+          type: String
+          description: Role del Usuario
+        pets:
+          type: Array
+          description: Arreglo de mascotas adoptadas por el usuario
+      example:
+        _id: 655eacde18d63f2d8e18f8c5
+        first_name: Juan
+        last_name: Correa
+        email: juan@gamil.com
+        password: $2b$10$jo8EM4kblYt2BXI/K5t12OsScO6fTAgjlMFxLJVAnWO6xn4tmd7T2
+        role: user
+        pets: []
